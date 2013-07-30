@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'thumbs_up'
 gem 'rails', '3.2.13'
-gem 'sqlite3'
 gem 'devise'
 gem 'jquery-rails'
 gem 'rspec-rails'
@@ -19,5 +18,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass', '~> 2.3.2.1'
 end
+
+group :development do 
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end
+
 
 gem 'activerecord-reputation-system', require: 'reputation_system'
