@@ -1,0 +1,14 @@
+<h1>Listing dilemmas</h1>
+
+<% @dilemmas.each do |dilemma| %>
+  <tr>
+    <td><%= dilemma.name %></td>
+    <td><%= link_to 'Show', dilemma %></td>
+    <td><%= link_to 'Destroy', dilemma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dilemma', new_dilemma_path %>

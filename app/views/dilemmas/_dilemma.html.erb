@@ -1,0 +1,38 @@
+<% @dilemmas.each do |dilemma| %>
+<div class="row-fluid">
+	<div class="span6 offset3" id="dilemmashow">
+		  <h2 class="centertext" id="headerdilemma"><%= dilemma.name %> </h2>
+	
+
+<% dilemma.questions.each do |question| %>
+	
+		<div class="span4 offset1" id="questions">
+
+	<h3><b>    <%= question.description %> </b></h3>
+
+		<h3> <%= pluralize question.reputation_for(:votes).to_i, "stemmer" %> </h3>
+
+			  	 	<% if current_user && !current_user.voted_for?(dilemma) %>
+				  	 	<div id="votebtn"> <%= link_to "Stem på dette", vote_dilemma_question_path(dilemma, question, type: "up"), method: "post", class: "btn btn-large btn-primary" %>   </div>
+				 	<% end %>
+		
+		</div>
+	<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</div>
+
+<% end %>
