@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   has_many :dilemmas
 
-  validates :name, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true, on: :update, allow_blank: true
 
   
     def voted_for?(dilemma)
