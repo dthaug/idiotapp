@@ -8,9 +8,9 @@
 	
 		<div class="span4 offset1" id="questions">
 
-	<h3><b>    <%= question.description %> </b></h3>
+	<p class="questiontext"><b>    <%= question.description %> </b></p>
 
-		<h3> <%= pluralize question.reputation_for(:votes).to_i, "stemmer" %> </h3>
+		<h4> <%= pluralize question.reputation_for(:votes).to_i, "stemmer" %> </h4>
 
 			  	 	<% if current_user && !current_user.voted_for?(dilemma) %>
 				  	 	<div id="votebtn"> <%= link_to "Stem på dette", vote_dilemma_question_path(dilemma, question, type: "up"), method: "post", class: "btn btn-large btn-primary" %>   </div>

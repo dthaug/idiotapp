@@ -9,7 +9,7 @@ $btnPrimaryBackgroundHighlight: #e74c3c;
 @import 'bootstrap';
 body{
     padding-top: 40px;
-    background: #ecf0f1;
+    background: url(/assets/squairy_light.png) top center repeat;
 }
 
 @import 'bootstrap-responsive';
@@ -29,7 +29,9 @@ body{
 
 #signuphome {
 	  width: 100%;
-	  height: 180px;
+	  height: 275px;
+    min-height: 100px;
+    max-height: 275px;
 	  background: #3498db;
 	  color: #FFF;
       text-align: center;
@@ -62,7 +64,7 @@ body{
 
 #questions {
     text-align: center;
-    height: 240px;
+    height: auto;
     position: relative;
     padding-left: 20px;
 }
@@ -70,11 +72,16 @@ body{
 #headerdilemma {
     border-bottom: 1px solid #EEE;
     padding-bottom: 5px;
-    font-size: 40px;
+    margin-top: 5px;
+    font-size: 35px;
 }
 
 #votebtn {
-    bottom: 0px; 
-    position: absolute;  
-    margin-bottom: 10px;  
+  padding-bottom: 10px;
+}
+
+.questiontext {
+  font-size: 22px;
+  color: #FFF;
+  line-height: 115%;
 }
