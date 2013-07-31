@@ -10,6 +10,8 @@ gem 'simple_form'
 gem 'paperclip'
 gem 'rmagick'
 
+gem 'newrelic_rpm'
+
 
 
 group :assets do
